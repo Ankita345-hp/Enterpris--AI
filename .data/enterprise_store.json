@@ -1,0 +1,406 @@
+{
+  "users": [
+    {
+      "id": "d87c2b3e-1111-4444-9999-000000000001",
+      "name": "Dr. Elena Rostova",
+      "email": "admin@enterprise.ai",
+      "password_hash": "$2b$10$XfHWz6jVAwVhW/h8buXKtOA2P2..RCATJo4n4pz.tqyUtgk/A5w7y",
+      "role": "admin",
+      "department": "Executive",
+      "created_at": "2026-09-30T06:08:09.529Z",
+      "updated_at": "2026-09-30T06:08:09.529Z"
+    },
+    {
+      "id": "d87c2b3e-2222-4444-9999-000000000002",
+      "name": "Marcus Vance",
+      "email": "manager@enterprise.ai",
+      "password_hash": "$2b$10$rU1aWfl9KswVARVVcuuMqOEU5km5O6GO03lnyumOFKu8sxrckqMAy",
+      "role": "manager",
+      "department": "Operations",
+      "created_at": "2026-10-10T06:08:09.529Z",
+      "updated_at": "2026-10-10T06:08:09.529Z"
+    },
+    {
+      "id": "d87c2b3e-3333-4444-9999-000000000003",
+      "name": "Sarah Chen",
+      "email": "user@enterprise.ai",
+      "password_hash": "$2b$10$LKqT7vesw4Ut6eLQz0zwBeISbYE9yd.IakSyvGhb6XbSQXKmrkOFa",
+      "role": "user",
+      "department": "Operations",
+      "created_at": "2026-10-15T06:08:09.529Z",
+      "updated_at": "2026-10-15T06:08:09.529Z"
+    },
+    {
+      "id": "d87c2b3e-4444-4444-9999-000000000004",
+      "name": "Devon Miller",
+      "email": "hr.lead@enterprise.ai",
+      "password_hash": "$2b$10$rU1aWfl9KswVARVVcuuMqOEU5km5O6GO03lnyumOFKu8sxrckqMAy",
+      "role": "manager",
+      "department": "Human Resources",
+      "created_at": "2026-10-12T06:08:09.529Z",
+      "updated_at": "2026-10-12T06:08:09.529Z"
+    },
+    {
+      "id": "d87c2b3e-5555-4444-9999-000000000005",
+      "name": "Alicia Zhang",
+      "email": "finance@enterprise.ai",
+      "password_hash": "$2b$10$rU1aWfl9KswVARVVcuuMqOEU5km5O6GO03lnyumOFKu8sxrckqMAy",
+      "role": "manager",
+      "department": "Finance",
+      "created_at": "2026-10-05T06:08:09.529Z",
+      "updated_at": "2026-10-05T06:08:09.529Z"
+    }
+  ],
+  "workflows": [
+    {
+      "id": "wf-1001-invoice-reconcile",
+      "title": "Automated Invoice Anomaly Detection & ERP Reconciliation",
+      "description": "Ingests vendor accounts payable invoices, parses line items via Gemini OCR, detects variance anomalies, and auto-posts compliant entries to SAP.",
+      "category": "Finance & Procurement",
+      "status": "completed",
+      "created_by": "d87c2b3e-5555-4444-9999-000000000005",
+      "creator_name": "Alicia Zhang",
+      "creator_email": "finance@enterprise.ai",
+      "creator_department": "Finance",
+      "ai_metadata": {
+        "workflow_title": "Automated Invoice Anomaly Detection & ERP Reconciliation",
+        "department": "Finance",
+        "risk_assessment": "Low risk. Automatic human-in-the-loop escalation triggered for variance discrepancies exceeding 5% or $10,000 threshold.",
+        "confidence_score": 98.4,
+        "steps": [
+          {
+            "step_number": 1,
+            "action_name": "Ingest and Normalize Multi-Format Invoices (PDF/EDI)",
+            "ai_automation_enabled": true,
+            "expected_output": "Structured JSON payload with normalized supplier IDs, PO reference, and tax subtotals.",
+            "status": "completed",
+            "execution_output": "142 incoming invoices normalized. 100% field extraction confidence.",
+            "executed_at": "2026-10-30T02:08:09.529Z"
+          },
+          {
+            "step_number": 2,
+            "action_name": "Three-Way Matching against Open Purchase Orders & Receipt Slips",
+            "ai_automation_enabled": true,
+            "expected_output": "Line-by-line price and quantity variance matrix.",
+            "status": "completed",
+            "execution_output": "Matched 139 invoices cleanly. 3 invoices flagged for price discrepancy ($4,120 net variance).",
+            "executed_at": "2026-10-30T03:08:09.529Z"
+          },
+          {
+            "step_number": 3,
+            "action_name": "Audit Trail Signature & SAP Journal Entry Auto-Post",
+            "ai_automation_enabled": true,
+            "expected_output": "ERP transaction reference ID and immutable cryptographic audit timestamp.",
+            "status": "completed",
+            "execution_output": "Entries committed to SAP S/4HANA (Batch ID #SAP-88219). Clean audit receipt generated.",
+            "executed_at": "2026-10-30T04:08:09.529Z"
+          }
+        ],
+        "execution_logs": [
+          "Workflow triggered on scheduled procurement cycle.",
+          "OCR parser extracted line items with 99.2% accuracy.",
+          "Three-way match completed in 1.4 seconds.",
+          "Audit trail written with SHA-256 batch signature."
+        ],
+        "last_executed_at": "2026-10-30T04:08:09.529Z"
+      },
+      "created_at": "2026-10-25T06:08:09.529Z"
+    },
+    {
+      "id": "wf-1002-logistics-delay",
+      "title": "Global Supply Chain Bottleneck & Port Congestion Mitigator",
+      "description": "Monitors real-time trans-Pacific freight schedules, port customs dwell times, and generates dynamic multi-modal rerouting plans.",
+      "category": "Operations & Supply Chain",
+      "status": "running",
+      "created_by": "d87c2b3e-2222-4444-9999-000000000002",
+      "creator_name": "Marcus Vance",
+      "creator_email": "manager@enterprise.ai",
+      "creator_department": "Operations",
+      "ai_metadata": {
+        "workflow_title": "Global Supply Chain Bottleneck & Port Congestion Mitigator",
+        "department": "Operations",
+        "risk_assessment": "Moderate risk. Rerouting air freight incurs incremental expense requiring operations VP sign-off.",
+        "confidence_score": 94.2,
+        "steps": [
+          {
+            "step_number": 1,
+            "action_name": "Telemetry Ingestion from AIS Marine Transponders & Port Authorities",
+            "ai_automation_enabled": true,
+            "expected_output": "Estimated Time of Berthing (ETB) delta matrix across 12 primary hub ports.",
+            "status": "completed",
+            "execution_output": "Long Beach & Rotterdam berths reporting 4.2 day average queue delays.",
+            "executed_at": "2026-10-30T05:08:09.529Z"
+          },
+          {
+            "step_number": 2,
+            "action_name": "Predictive ETA Slippage Impact Modeling on Assembly Lines",
+            "ai_automation_enabled": true,
+            "expected_output": "Stockout probability risk scores per manufacturing plant.",
+            "status": "running",
+            "execution_output": "Evaluating 18 SKU clusters for Plant Beta (Austin, TX)."
+          },
+          {
+            "step_number": 3,
+            "action_name": "Dynamic Intermodal Freight Reallocation & Carrier Tender",
+            "ai_automation_enabled": true,
+            "expected_output": "Optimized dry-van and rail intermodal dispatch assignments with cost impact.",
+            "status": "pending"
+          }
+        ],
+        "execution_logs": [
+          "Carrier AIS feed streaming active.",
+          "Container dwell time at Port of Long Beach exceeding threshold (+48h).",
+          "Agent initiating predictive stockout simulation..."
+        ],
+        "last_executed_at": "2026-10-30T05:08:09.529Z"
+      },
+      "created_at": "2026-10-27T06:08:09.529Z"
+    },
+    {
+      "id": "wf-1003-onboarding-automation",
+      "title": "Enterprise Employee Onboarding & Cross-System Provisioning",
+      "description": "Automates identity provisioning across Okta, GitHub Enterprise, Jira, and generates role-tailored technical 30-day learning curricula.",
+      "category": "Human Resources & Workforce",
+      "status": "completed",
+      "created_by": "d87c2b3e-4444-4444-9999-000000000004",
+      "creator_name": "Devon Miller",
+      "creator_email": "hr.lead@enterprise.ai",
+      "creator_department": "Human Resources",
+      "ai_metadata": {
+        "workflow_title": "Enterprise Employee Onboarding & Cross-System Provisioning",
+        "department": "Human Resources",
+        "risk_assessment": "Low risk. Enforces least-privilege RBAC role templates approved by Information Security.",
+        "confidence_score": 99.1,
+        "steps": [
+          {
+            "step_number": 1,
+            "action_name": "HRIS New Hire Ingestion & Identity Record Creation",
+            "ai_automation_enabled": true,
+            "expected_output": "Enterprise employee profile with assigned department and role taxonomy.",
+            "status": "completed",
+            "execution_output": "Provisioned 8 new hires for Q4 engineering and product cohorts.",
+            "executed_at": "2026-10-29T06:08:09.529Z"
+          },
+          {
+            "step_number": 2,
+            "action_name": "Automated Zero-Trust RBAC & Hardware Dispatch Order",
+            "ai_automation_enabled": true,
+            "expected_output": "Okta group memberships assigned and IT asset serial logged.",
+            "status": "completed",
+            "execution_output": "SSO access granted to Slack, Jira, and Figma. MacBook Pro dispatch confirmed via FedEx.",
+            "executed_at": "2026-10-29T06:08:09.529Z"
+          },
+          {
+            "step_number": 3,
+            "action_name": "AI-Generated Departmental Onboarding Roadmap & Mentor Pairing",
+            "ai_automation_enabled": true,
+            "expected_output": "Personalized 30-60-90 day milestone dashboard with buddy assignment.",
+            "status": "completed",
+            "execution_output": "Personalized onboarding roadmap delivered to new hires via enterprise portal.",
+            "executed_at": "2026-10-29T06:08:09.529Z"
+          }
+        ],
+        "execution_logs": [
+          "HRIS webhook received from Workday.",
+          "Zero-trust policy checked with SecOps agent.",
+          "Accounts generated with SSO MFA enforcement."
+        ],
+        "last_executed_at": "2026-10-29T06:08:09.529Z"
+      },
+      "created_at": "2026-10-28T06:08:09.529Z"
+    },
+    {
+      "id": "wf-1004-sla-breach-prevention",
+      "title": "Customer Success SLA Breach Prevention & Sentiment Triage",
+      "description": "Continuously monitors Zendesk and Salesforce Service Cloud ticket backlogs, detects customer churn sentiment, and escalates high-risk accounts.",
+      "category": "Customer Success & Support",
+      "status": "pending",
+      "created_by": "d87c2b3e-1111-4444-9999-000000000001",
+      "creator_name": "Dr. Elena Rostova",
+      "creator_email": "admin@enterprise.ai",
+      "creator_department": "Executive",
+      "ai_metadata": {
+        "workflow_title": "Customer Success SLA Breach Prevention & Sentiment Triage",
+        "department": "Customer Success",
+        "risk_assessment": "Low risk. Automatic re-assignment to Tier-3 support engineers with Slack alert.",
+        "confidence_score": 96,
+        "steps": [
+          {
+            "step_number": 1,
+            "action_name": "Real-time NLP Sentiment and Urgency Scoring",
+            "ai_automation_enabled": true,
+            "expected_output": "Aggregated sentiment score (-1.0 to +1.0) and contract ARR impact weighting with tickets flagged for immediate escalation.",
+            "status": "pending"
+          },
+          {
+            "step_number": 2,
+            "action_name": "Automated Draft Solution Synthesis from Internal Knowledge Base",
+            "ai_automation_enabled": true,
+            "expected_output": "Context-grounded resolution draft with verified documentation citations.",
+            "status": "pending"
+          },
+          {
+            "step_number": 3,
+            "action_name": "CSM Slack Incident Bridge & SLA Countdown Timer",
+            "ai_automation_enabled": true,
+            "expected_output": "Urgent incident war-room creation if SLA expiry is < 45 minutes.",
+            "status": "pending"
+          }
+        ],
+        "execution_logs": [
+          "Workflow configured for continuous polling every 15 minutes.",
+          "Awaiting scheduled batch trigger."
+        ]
+      },
+      "created_at": "2026-10-29T06:08:09.529Z"
+    },
+    {
+      "id": "wf-1005-freight-fuel-audit",
+      "title": "Ocean & Air Freight Fuel Surcharge Compliance Audit",
+      "description": "Audits carrier invoices against Platts Bunker Index and agreed contractual fuel surcharges to recover carrier over-billing.",
+      "category": "Operations & Supply Chain",
+      "status": "completed",
+      "created_by": "d87c2b3e-3333-4444-9999-000000000003",
+      "creator_name": "Sarah Chen",
+      "creator_email": "user@enterprise.ai",
+      "creator_department": "Operations",
+      "ai_metadata": {
+        "workflow_title": "Ocean & Air Freight Fuel Surcharge Compliance Audit",
+        "department": "Operations",
+        "risk_assessment": "Very low risk. Disputed amounts generate pre-formatted credit note requests to 3PL partners.",
+        "confidence_score": 99.5,
+        "steps": [
+          {
+            "step_number": 1,
+            "action_name": "Carrier Rate Sheet Ingestion & Benchmark Rate Lookup",
+            "ai_automation_enabled": true,
+            "expected_output": "Parsed monthly BAF (Bunker Adjustment Factor) index parameters.",
+            "status": "completed",
+            "execution_output": "Parsed 31 ocean freight contract schedules. Benchmarks verified.",
+            "executed_at": "2026-10-26T06:08:09.529Z"
+          },
+          {
+            "step_number": 2,
+            "action_name": "Audit Calculation across 480 Bill-of-Ladings",
+            "ai_automation_enabled": true,
+            "expected_output": "Variance report flagging non-compliant surcharge calculations.",
+            "status": "completed",
+            "execution_output": "Discovered $34,800 in overbilled BAF fuel surcharges across 4 major carriers.",
+            "executed_at": "2026-10-26T06:08:09.529Z"
+          },
+          {
+            "step_number": 3,
+            "action_name": "Automated Credit Claim Generation & Carrier Notification",
+            "ai_automation_enabled": true,
+            "expected_output": "Generated dispute letters with supporting BOL receipts.",
+            "status": "completed",
+            "execution_output": "Dispute letters dispatched to carriers. $28,400 already credited.",
+            "executed_at": "2026-10-27T06:08:09.529Z"
+          }
+        ],
+        "execution_logs": [
+          "Carrier rate audit completed successfully.",
+          "Over-billing identified on Asia-Europe maritime routes.",
+          "Credit recovery rate: 81.6%."
+        ],
+        "last_executed_at": "2026-10-27T06:08:09.529Z"
+      },
+      "created_at": "2026-10-24T06:08:09.529Z"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "log-a0a6c811",
+      "user_id": "d87c2b3e-1111-4444-9999-000000000001",
+      "user_name": "Dr. Elena Rostova",
+      "user_email": "admin@enterprise.ai",
+      "action": "AUTH_LOGIN",
+      "details": {
+        "role": "admin",
+        "department": "Executive"
+      },
+      "ip_address": "127.0.0.1",
+      "created_at": "2026-10-30T06:08:15.698Z"
+    },
+    {
+      "id": "log-ed315f64",
+      "user_id": "d87c2b3e-1111-4444-9999-000000000001",
+      "user_name": "Dr. Elena Rostova",
+      "user_email": "admin@enterprise.ai",
+      "action": "AUTH_LOGIN",
+      "details": {
+        "role": "admin",
+        "department": "Executive"
+      },
+      "ip_address": "127.0.0.1",
+      "created_at": "2026-10-30T06:08:09.632Z"
+    },
+    {
+      "id": "log-001",
+      "user_id": "d87c2b3e-1111-4444-9999-000000000001",
+      "user_name": "Dr. Elena Rostova",
+      "user_email": "admin@enterprise.ai",
+      "action": "SYSTEM_INITIALIZATION",
+      "details": {
+        "component": "Enterprise AI Suite Kernel",
+        "version": "2.5.0",
+        "security_policy": "RBAC_ENFORCED"
+      },
+      "ip_address": "10.0.4.12",
+      "created_at": "2026-09-30T06:08:09.529Z"
+    },
+    {
+      "id": "log-002",
+      "user_id": "d87c2b3e-5555-4444-9999-000000000005",
+      "user_name": "Alicia Zhang",
+      "user_email": "finance@enterprise.ai",
+      "action": "WORKFLOW_CREATED",
+      "details": {
+        "workflow_id": "wf-1001-invoice-reconcile",
+        "title": "Automated Invoice Anomaly Detection & ERP Reconciliation"
+      },
+      "ip_address": "10.0.12.88",
+      "created_at": "2026-10-25T06:08:09.529Z"
+    },
+    {
+      "id": "log-003",
+      "user_id": "d87c2b3e-5555-4444-9999-000000000005",
+      "user_name": "Alicia Zhang",
+      "user_email": "finance@enterprise.ai",
+      "action": "WORKFLOW_EXECUTED",
+      "details": {
+        "workflow_id": "wf-1001-invoice-reconcile",
+        "invoices_processed": 142,
+        "discrepancies_flagged": 3
+      },
+      "ip_address": "10.0.12.88",
+      "created_at": "2026-10-30T04:08:09.529Z"
+    },
+    {
+      "id": "log-004",
+      "user_id": "d87c2b3e-2222-4444-9999-000000000002",
+      "user_name": "Marcus Vance",
+      "user_email": "manager@enterprise.ai",
+      "action": "AI_ANALYSIS_RUN",
+      "details": {
+        "document_type": "logistics_manifest",
+        "report_name": "Q3 Trans-Pacific Container Manifests"
+      },
+      "ip_address": "10.0.8.44",
+      "created_at": "2026-10-30T01:08:09.529Z"
+    },
+    {
+      "id": "log-005",
+      "user_id": "d87c2b3e-3333-4444-9999-000000000003",
+      "user_name": "Sarah Chen",
+      "user_email": "user@enterprise.ai",
+      "action": "WORKFLOW_EXECUTED",
+      "details": {
+        "workflow_id": "wf-1005-freight-fuel-audit",
+        "recovery_amount": "$34,800"
+      },
+      "ip_address": "10.0.8.52",
+      "created_at": "2026-10-27T06:08:09.529Z"
+    }
+  ]
+}

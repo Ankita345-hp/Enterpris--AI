@@ -1,0 +1,6 @@
+{
+  "name": "Enterprise AI Suite",
+  "description": "Enterprise workflow automation, document analysis, departmental dashboards, and AI strategist powered by Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
